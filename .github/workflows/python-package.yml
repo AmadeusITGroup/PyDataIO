@@ -8,6 +8,7 @@ on:
   push:
     branches:
     - main
+    - init-repo
     tags:
     - "v*"
 
@@ -45,6 +46,7 @@ jobs:
       run: tox -e py
 
   dist:
+    if: (github.ref_name == 'main')
     runs-on: ubuntu-latest
     needs: [test]
     name: Build Python packages
@@ -78,7 +80,7 @@ jobs:
         python-version: "3.11"
     - name: Install dependencies
       run: pip install twine
-    - uses: actions/download-artifact@v4
+    - uses: actions/download-artifact@v5
       with:
         name: dist
         path: dist
@@ -92,7 +94,7 @@ jobs:
     permissions:
       id-token: write
     steps:
-    - uses: actions/download-artifact@v4
+    - uses: actions/download-artifact@v5
       with:
         name: dist
         path: dist
