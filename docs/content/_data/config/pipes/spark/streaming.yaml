@@ -1,0 +1,22 @@
+input:
+  type: pipes.spark.streaming.SparkInput
+
+output:
+  type: pipes.spark.batch.SparkOutput
+  fields:
+    - name: trigger
+      mandatory: "Yes"
+      description: Sets the trigger for the stream query. Can be ProcessingTimeTrigger, OneTimeTrigger, AvailableNowTrigger. Controls the trigger() Spark function (See pydataio.io.utils.triggers).
+      example: 'trigger: "AvailableNow"'
+    - name: duration
+      mandatory: "No"
+      description: It is used in the ProcessingTime trigger.
+      example: 'duration: "60 seconds"'
+    - name: timeout
+      mandatory: "Yes"
+      description: Controls the amount of time before returning from the streaming query.
+      example: 'timeout: "2 minutes"'
+    - name: sinkProcessor
+      mandatory: "No"
+      description: Fully qualified name of a skin processor to be used for the [for each batch sink](https://spark.apache.org/docs/latest/api/python/reference/pyspark.ss/api/pyspark.sql.streaming.DataStreamWriter.foreachBatch.html).
+      example: 'sinkProcessor: "getting.started.MySinkProcessor"'

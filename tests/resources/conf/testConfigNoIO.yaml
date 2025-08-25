@@ -1,0 +1,7 @@
+Processing:
+  type: "tests.dummies.DummyTransformerNoIO"
+  parameters:
+    dummyParam: "dummyValue"
+
+
+

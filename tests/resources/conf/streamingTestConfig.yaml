@@ -1,0 +1,25 @@
+Processing:
+  type: "tests.dummies.DummyTransformer"
+
+Input:
+  - name: "events"
+    type: "pipes.spark.streaming.SparkInput"
+    format: "json"
+    path: "tests/resources/data/events"
+    schema: "dummyEvent"
+
+Output:
+  name: "featurizedEvents"
+  type: "pipes.spark.streaming.SparkOutput"
+  sinkProcessor: "tests.dummies.DummyProcessor"
+  format: "noop"
+  mode: "append"
+  path: "tests/data/featurized"
+  trigger: "OneTimeTrigger"
+  timeout: "2 minutes"
+  options:
+    checkpointLocation: "tests/data/checkpoint"
+    maxFilesPerTrigger: 1
+    startingOffsets: "earliest"
+    failOnDataLoss: false
+
