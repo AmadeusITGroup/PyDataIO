@@ -17,7 +17,7 @@ Data I/O is an open source project that provides a flexible and scalable framewo
 - Open to make use of python ML models ecosystem (sklearn, xgboost, pytorch...)
 
 ## Getting Started
-To get started with Data I/O, please refer to the [documentation][gettingstarted] for installation instructions, usage examples, and API references.
+To get started with PyData I/O, please refer to the [documentation][gettingstarted] for installation instructions, usage examples, and API references.
 
 ## Issues and Support
 If you encounter any issues or require support, please create a new issue on the [GitHub repository][issues].
@@ -28,10 +28,10 @@ Contributions to Data I/O are welcome! To contribute, please follow the guidelin
 ## License
 This project is licensed under the Apache License 2.0 license. See the [LICENSE][license] file for more information.
 
-[gettingstarted]: https://amadeusitgroup.github.io/dataio-framework/getting-started.html
-[documentation]: https://amadeusitgroup.github.io/dataio-framework/
+[gettingstarted]: https://amadeusitgroup.github.io/pydataio/getting-started.html
+[documentation]: https://amadeusitgroup.github.io/pydataio/
 [contributing]: CONTRIBUTING.md
 [codeofconduct]: CODE_OF_CONDUCT.md
 [license]: LICENSE
-[repository]: https://github.com/AmadeusITGroup/dataio-framework
-[issues]: https://github.com/AmadeusITGroup/dataio-framework/issues
+[repository]: https://github.com/AmadeusITGroup/PyDataIO
+[issues]: https://github.com/AmadeusITGroup/PyDataIO/issues
