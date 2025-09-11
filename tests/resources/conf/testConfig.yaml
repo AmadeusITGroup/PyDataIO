@@ -1,0 +1,15 @@
+Processing:
+  type: "tests.dummies.DummyTransformer"
+
+Input:
+  - name: "events"
+    type: "pipes.spark.batch.SparkInput"
+    format: "json"
+    path: "tests/resources/data/events"
+    schema: "dummyEvent"
+
+Output:
+  type: "pipes.spark.batch.SparkOutput"
+  format: "noop"
+  mode: "overwrite"
+  path: "tests/data/featurized"

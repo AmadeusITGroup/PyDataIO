@@ -1,0 +1,5 @@
+input: 
+  type: pipes.spark.batch.SparkInput
+
+output:
+  type: pipes.spark.batch.SparkOutput

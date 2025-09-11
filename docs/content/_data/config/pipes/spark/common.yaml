@@ -1,0 +1,26 @@
+name: spark
+description: Allows the use of the default Spark I/O features in batch and streaming.
+
+code_directory: spark
+
+links:
+  - name: Schema definition
+    url: /configuration/schema-definitions.html
+
+fields:
+  - name: path
+    description: The directory where the data is stored. Note that you may rely on <a href="/configuration/paths.html">path templatization</a>.
+    example: 'path: "hdfs://path/to/data"'
+  - name: format
+    description: The format to use to read the data
+    example: 'format: "csv"'
+    default: "The value is set as default in Spark configuration: spark.sql.sources.default"
+  - name: schema
+    description: The schema of the input data. See the <a href="/configuration/schema-definitions.html">schema definitions page</a> for more information.
+    example: 'schema: "my-schema"'
+  - name: options
+    description: Spark options, as key = value pairs. The list of available options is available in the official <a href="https://spark.apache.org/docs/3.5.0/api/java/org/apache/spark/sql/DataFrameReader.html" target="_blank">Spark API documentation</a> for the DataFrameReader
+    example: "options:
+                 header: true
+                 failOnDataLoss: false
+             "

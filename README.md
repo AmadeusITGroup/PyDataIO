@@ -1,140 +1,37 @@
-Copyright (C) YEAR Amadeus s.a.s.
-See the end of the file for license conditions.
+# PyData I/O
 
-# python-project-starter
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Spark](https://img.shields.io/badge/Spark-3.5.2-blue)](https://spark.apache.org/releases/spark-release-3-5-2.html)
+[![Python](https://img.shields.io/badge/python-3.11-red)](https://www.python.org/)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)][contributing]
 
-This is a template repo to act as a reference when starting up a new project in python. It consolidates best practices in regards to minimal level of documentation as well as the CI aspects.
+Data I/O is an open source project that provides a flexible and scalable framework for data input and output operations in Spark applications. It offers a set of powerful tools and abstractions to simplify and streamline data processing pipelines.
 
-Local installation can be done using [`uv`](https://github.com/astral-sh/uv):
+## Features
 
-```bash
-$ uv venv -p python3.11
-$ uv pip install -e .
-$ source .venv/bin/activate
-$ python
->>> from package import square
->>> square(3)
-9
-```
+- Easy-to-use API for defining data processors and transformations
+- Seamless integration with popular data storage systems and formats
+- Support for batch and streaming data processing
+- Extensible architecture for custom data processors and pipelines
+- Scalable and fault-tolerant processing using Apache Spark
+- Open to make use of python ML models ecosystem (sklearn, xgboost, pytorch...)
 
-After installation a command-line tool is also available:
+## Getting Started
+To get started with PyData I/O, please refer to the [documentation][gettingstarted] for installation instructions, usage examples, and API references.
 
-```bash
-$ square 4
-Square of 4 is 16
-```
+## Issues and Support
+If you encounter any issues or require support, please create a new issue on the [GitHub repository][issues].
 
-Running the tests can be done using [`tox`](https://tox.wiki/):
+## Contribution
+Contributions to Data I/O are welcome! To contribute, please follow the guidelines outlined in [our contribution guide][contributing].
 
-```bash
-$ tox -p
-```
+## License
+This project is licensed under the Apache License 2.0 license. See the [LICENSE][license] file for more information.
 
-Building the packages can also be done using `tox`:
-
-```bash
-$ tox -e packages
-$ ls dist/
-```
-
-Packaging uses [`setuptools-scm`](https://github.com/pypa/setuptools-scm), so the version of the software is based on git tags.
-
-To run the linting, we recommend `ruff`, a standard configuration is in the repo in `pyproject.toml`.
-
-# Pre-commit Hooks
-
-This project uses [`pre-commit`](https://pre-commit.com/) to ensure code quality and consistency before committing changes. Pre-commit hooks automatically run checks such as linting and formatting on staged files.
-
-## Setting up Pre-commit Hooks
-
-To set up pre-commit hooks for this repository, follow these steps:
-
-1. Install `pre-commit` if you haven't already:
-
-```bash
-   pip install pre-commit
-```
-
-2. Install the pre-commit hooks defined in the `.pre-commit-config.yaml` file:
-
-```bash
-pre-commit install
-```
-
-3. You can manually run the pre-commit hooks on all files in the repository using:
-
-```bash
-pre-commit run --all-files
-```
-
-## How it Works
-Once installed, the pre-commit hooks will automatically run on staged files whenever you attempt to make a commit. If any of the hooks fail, the commit will be blocked until the issues are resolved.
-
-## Updating Hooks
-To update the pre-commit hooks to their latest versions, run:
-```bash
-pre-commit autoupdate
-```
-## Available Hooks
-
-Some examples of the pre-commit:
-
-- **black**: Automatically formats Python code to conform to the Black code style.
-- **isort**: Sorts imports in Python files according to PEP 8 guidelines.
-- **flake8**: Checks Python code for style guide enforcement.
-- **mypy**: Performs static type checking on Python code.
-- **ruff**: A fast Python linter and code quality tool.
-- **bandit**: A security linter for Python code.
-- **check-yaml**: Validates YAML files for syntax errors.
-- **check-added-large-files**: Prevents large files from being added to the repository.
-- **check-merge-conflict**: Checks for merge conflict markers in files.
-- **end-of-file-fixer**: Ensures that files end with a newline character.
-- **trailing-whitespace**: Removes trailing whitespace from lines in files.
-- **detect-private-key**: Detects private keys in files to prevent accidental exposure.
-- **check-json**: Validates JSON files for syntax errors.
-- **check-ast**: Checks Python files for syntax errors and other issues.
-- **check-toml**: Validates TOML files for syntax errors.
-- **check-merge-conflict**: Checks for merge conflict markers in files.
-- **check-symlinks**: Checks for broken symbolic links in the repository.
-- **check-xml**: Validates XML files for syntax errors.
-- **check-docs**: Checks for documentation issues in Python files.
-- **check-urls**: Checks for broken URLs in files.
-- **check-binary-files**: Checks for binary files in the repository.
-- **check-merge-conflict**: Checks for merge conflict markers in files.
-
-.. and many more!
-
-## Disabling Hooks Temporarily
-If you need to skip the pre-commit hooks for a specific commit, you can use the --no-verify flag:
-
-## Configuration
-The hooks are configured in the .pre-commit-config.yaml file located in the root of the repository. You can customize the hooks as needed by editing this file. For more information, refer to the pre-commit documentation.
-
-
-
-# Releasing
-To release a new version of the package, you can create a pre-release from the main branch using GitHub UI, which will then trigger the release workflow. Alternatively, you can use the `gh` command line tool to create a release:
-
-```bash
-gh release create v[a.b.c] --prerelease --title "Kick starting the release"  --target main
-```
-
-# Contributing
-We welcome contributions to this project! If you have an idea for a new feature, bug fix, or improvement, please open an issue or submit a pull request. Before contributing, please read our [contributing guidelines](./CONTRIBUTING.md).
-
-# License
-
-This file is part of PROJECT.
-
-PROJECT is free software: you can redistribute it and/or
-modify it under the terms of the Apache 2.0 License as published by
-the Apache Software Foundation.
-
-PROJECT is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the License
-for more details.
-
-You should have received a copy of the Apache 2.0 License
-along with PROJECT.
-If not, see <https://www.apache.org/licenses/LICENSE-2.0>.
+[gettingstarted]: https://amadeusitgroup.github.io/pydataio/getting-started.html
+[documentation]: https://amadeusitgroup.github.io/pydataio/
+[contributing]: CONTRIBUTING.md
+[codeofconduct]: CODE_OF_CONDUCT.md
+[license]: LICENSE
+[repository]: https://github.com/AmadeusITGroup/PyDataIO
+[issues]: https://github.com/AmadeusITGroup/PyDataIO/issues
