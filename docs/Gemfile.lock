@@ -73,7 +73,6 @@ GEM
     webrick (1.8.2)
 
 PLATFORMS
-  arm64-darwin-24
   x86_64-linux
 
 DEPENDENCIES
@@ -81,7 +80,7 @@ DEPENDENCIES
   bigdecimal (~> 3.2)
   csv (~> 3.3)
   jekyll (~> 4.3.2)
-  just-the-docs (= 0.5.3)
+  just-the-docs (~> 0.5.3)
 
 BUNDLED WITH
    2.3.5
