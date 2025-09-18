@@ -17,7 +17,7 @@ input. To do so you have to:
 
 ## Creating a schema
 
-Creating a schema is done by creating a variable specifying a [spark sql StructType](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.types.StructType.html) which will define the properties of your data. You can use every types supported by Spark SQL.  For more information about supproted types, see the list on <a href="https://spark.apache.org/docs/3.1.2/sql-ref-datatypes.html" target="_blank">Spark SQL official website</a>.
+Creating a schema is done by creating a variable specifying a [spark sql StructType](https://spark.apache.org/docs/latest/api/python/reference/pyspark.sql/api/pyspark.sql.types.StructType.html) which will define the properties of your data. You can use every types supported by Spark SQL.  For more information about supproted types, see the list on [Spark SQL official website](https://spark.apache.org/docs/lqtest/sql-ref-datatypes.html).
 
 For example you can define a simple schema like this:
 

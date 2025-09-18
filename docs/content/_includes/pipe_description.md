@@ -5,7 +5,7 @@
 {: .warning}
 {% endif %}
 
-{% assign root_package = "https://github.com/AmadeusITGroup/PyDataIO/tree/main/src/pydataio/io" %}
+{% assign root_package = "https://github.com/AmadeusITGroup/PyDataIO/tree/main/src/PyDataIO/io" %}
 {% assign code_directory =  root_package | append: "/pipes/" | append: include.pipe.common.code_directory %}
 
 {% if include.pipe.common.code_directory %}
