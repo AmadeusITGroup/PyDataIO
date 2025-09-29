@@ -85,7 +85,7 @@ requires-python = ">=3.11"
 dependencies = [
     "adlfs>=2024.7.0",
     "fsspec>=2024.10.0",
-    "pyyaml==6.0.2",
+    "pyyaml==6.0.3",
 ]
 
 [dependency-groups]
