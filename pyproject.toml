@@ -74,7 +74,7 @@ exclude = ["docs"]
 
 [project]
 name = "pydataio"
-version = "1.0.1"
+version = "1.0.2"
 description = "A scalable framework for data input and output operations in Spark applications"
 authors = [
     { name = "Simone DE SANTIS", email = "simone.desantis@amadeus.com" },
