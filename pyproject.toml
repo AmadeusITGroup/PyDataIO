@@ -83,7 +83,7 @@ authors = [
 readme = "README.md"
 requires-python = ">=3.11"
 dependencies = [
-    "adlfs==2024.7.0",
+    "adlfs==2025.8.0",
     "fsspec==2024.12.0",
     "pyyaml==6.0.3",
 ]
