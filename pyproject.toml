@@ -90,7 +90,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "pyspark==3.5.2",
+    "pyspark==4.1.0",
     "pytest>=8.3.3",
 ]
 
